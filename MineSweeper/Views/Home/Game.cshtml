@@ -1,0 +1,25 @@
+﻿
+@{
+	ViewBag.Title = "Game";
+
+}
+
+<h2>Game</h2>
+
+/*Timer*/
+
+<table width="1000" border="1">
+	@{
+		for(int i = 0; i < ViewBag.Size; i++)
+		{
+			<tr>
+				@for(int j = 0; j < ViewBag.Size; j++)
+				{
+					<td align="center">
+						<input id="cell" name="@{$"{i}|{j}".ToString();}" type="button" oncontextmenu="location.href='@Url.Action("CellRightClick", "Game",  new { ButtonName = $"{i}|{j}"})'" onclick="location.href='@Url.Action("CellLeftClick", "Game",  new { ButtonName = $"{i}|{j}"})'">
+					</td>
+				}
+			</tr>
+		}
+	}
+</table>

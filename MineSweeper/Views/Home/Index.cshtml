@@ -1,0 +1,25 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+}
+	<div name="game-nav-bar">
+		<table width="300">
+			<tr>
+				<td><p>Welcome to MineSweeper<br />Choose your level:</p></td>
+			</tr>
+			<tr>
+				<td>
+					<button onclick="location.href='@Url.Action("Game", "Home", new { GameMode = MineSweeper.Models.GameState.Easy})'">Easy</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button onclick="location.href='@Url.Action("Game", "Home", new { GameMode = MineSweeper.Models.GameState.Medium})'">Medium</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button onclick="location.href='@Url.Action("Game", "Home",  new { GameMode = MineSweeper.Models.GameState.Hard})'">Hard</button>
+				</td>
+			</tr>
+		</table>
+	</div>
